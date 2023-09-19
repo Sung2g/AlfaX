@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Sharp" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/style.css">
+    <title>AlfaX Ofis | Teknik </title>
+</head>
+<body>
+
+<div class="container">
+    <!-- Sidebar -->
+    <aside>
+        <div class="toggle">
+            <div class="logo">
+                <a class="navbar-brand" href="home_page.html" target="_self"> <img src="../img/images/logo.png"></a>
+                <h2>Alfa<span class="danger">Tek</span></h2>
+            </div>
+            <div class="close" id="close-btn">
+                    <span class="material-icons-sharp">
+                        close
+                    </span>
+            </div>
+        </div>
+
+        <div class="sidebar">
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        dashboard
+                    </span>
+                <h3>Ansayfa</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        person_outline
+                    </span>
+                <h3>Üyeler</h3>
+            </a>
+            </a>
+            <a href="#" class="active">
+                    <span class="material-icons-sharp">
+                        insights
+                    </span>
+                <h3>AlfaMusic</h3>
+            </a>
+            <a href="#">
+                <span class="material-icons-sharp">
+                    question_answer
+                </span>
+
+                <h3>AlfaChat</h3>
+                <span class="message-count">27</span>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        restaurant
+                    </span>
+                <h3>AlfaDelizia</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        settings
+                    </span>
+                <h3>Ayarlar</h3>
+            </a>
+            <a href="#">
+                    <span class="material-icons-sharp">
+                        add
+                    </span>
+                <h3>Öneriler</h3>
+            </a>
+            <button id="loggoutButton" type="button">
+                <a>
+                    <span class="material-icons-sharp">
+                        logout
+                    </span>
+                <h3>Çıkış Yap</h3>
+            </a>
+            </button>
+            
+        </div>
+    </aside>
+    <!-- End of Sidebar Section -->
+
+    <!-- Main Content -->
+    <main>
+        <h1>AlfaMusic</h1>
+        <!-- Analyses -->
+        <div class="analyse">
+            <div class="sales">
+                <div class="status">
+                    <div class="info">
+                        <h3>Haftanın En İyisi</h3>
+                        <h1>Lil Zey - DEFOL (Music Video)</h1>
+                    </div>
+                    <div class="progresss">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="percentage">
+                            <p>24</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="visits">
+                <div class="status">
+                    <div class="info">
+                        <h3>Haftanın En Kötüsü</h3>
+                        <h1>Kasım Şeren - Aşk Benimle</h1>
+                    </div>
+                    <div class="progresss">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="percentage">
+                            <p>-52</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="searches">
+                <div class="status">
+                    <div class="info">
+                        <h3>En Çok Dinlenen</h3>
+                        <h1>Müslüm Gürses - Kısmetim Kapanmış</h1>
+                    </div>
+                    <div class="progresss">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="percentage">
+                            <p>542</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End of Analyses -->
+
+        <!-- New Users Section -->
+        <div class="new-users">
+            <h2>Çalan Müzik</h2>
+            <div class="user-list">
+                <div class="user">
+                    <img src="../img/images/alihan.jpg">
+                    <h2>Alihan</h2>
+                    <p>Çalan Kişi</p>
+                </div>
+                <div  class="user">
+                    <img id="music-img" src="../img/images/plak.jpg">
+                    <h2>Çalan Şarkı</h2>
+                    <p>Oynatma Listene Ekle</p>
+                </div>
+
+                <div id="music-info"class="user">
+                    <h2 id="contentt">Video Başlığı</h2>
+                    <p id="contentinfo">Görüntüleme Sayısı - Beğeni Sayısı</p>
+
+                    <div class="youtubeFrame">
+                        <div id="player">
+                            <input class="slider" type="range" min="0" max="100" value="0" id="fader">
+                            <label  for="fader">0:00</label>
+                            <output id="ytplayer" for="fader" class="duration"></output>
+                            <div id="playerss">
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+                <div class="user">
+                  <button
+                          style="background: transparent"
+                          id="popup-button"
+                          type="button"
+                          class="music-list">
+                      <img id="rotate-image" src="../img/images/plus.png" alt="Image">
+                  </button>
+                    <div id="popupp" class="popup">
+
+                        <div class="popup-content">
+                            <span class="close">&times;</span>
+                            <h2>Sıraya Müzik Ekle</h2>
+                            <input id="video-input" type="text" placeholder="Eklemek istediğiniz müzik linkini buraya giriniz..">
+                            <p><h3>Önizleme</h3></p>
+                        <p id="video-preview">
+                            <span id="video-title">
+
+                            </span>
+                        </p>
+
+                            <div class="add-order">
+                                <button id="add-button">Ekle</button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <h2 id="playlist">Ekle</h2>
+                    <p> Sıraya Şarkı Ekle</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- End of New Users Section -->
+
+        <!-- Recent Orders Table -->
+        <div class="recent-orders">
+            <h2>Oynatma Sırası</h2>
+            <table>
+                <thead>
+                <tr>
+                    <th>Dj</th>
+                    <th>Sanatçı</th>
+                    <th>Şarkı İsmi</th>
+                    <th>Süresi</th>
+                    <th></th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <a href="#">Tüm Sırayı GÖster</a>
+        </div>
+        <!-- End of Recent Orders -->
+
+    </main>
+    <!-- End of Main Content -->
+
+    <!-- Right Section -->
+    <div class="right-section">
+        <div class="nav">
+            <button id="menu-btn">
+                    <span class="material-icons-sharp">
+                        menu
+                    </span>
+            </button>
+            <div class="dark-mode">
+                    <span class="material-icons-sharp active">
+                        light_mode
+                    </span>
+                <span class="material-icons-sharp">
+                        dark_mode
+                    </span>
+            </div>
+
+            <div class="profile">
+                <div class="info">
+                    <p>Merhaba, <b>Alihan</b></p>
+                    <small class="text-muted">Beta</small>
+                </div>
+                <div class="profile-photo">
+                    <img src="../img/images/profile-1.jpg">
+                </div>
+            </div>
+
+        </div>
+        <!-- End of Nav -->
+
+        <div class="user-profile">
+            <div class="logo">
+                <img src="../img/images/logo.png">
+                <h2>AlfaTek</h2>
+                <p>Fullstack Web Developer</p>
+            </div>
+        </div>
+
+        <div class="reminders">
+            <div class="notification">
+                <div class="col-md-8 bg-white ">
+                    <section id="bodyy" class="chatbox">
+                        <section class="chat-window">
+                            <article class="msg-container msg-remote" id="msg-0">
+                                <div class="msg-box">
+                                    <img class="user-img" id="Uygar" src="../img/images/uygar.jpg" />
+                                    <div class="flr">
+                                        <div class="messages">
+                                            <p class="msg" id="msg-0">
+                                                Alihan abinin çalacağı şarkı bu kadar olur.
+                                            </p>
+                                        </div>
+                                        <span class="timestamp"><span class="username">Uygar</span>&bull;<span class="posttime">3 dakika önce.</span></span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="msg-container msg-self" id="msg-0">
+
+                                <div class="msg-box">
+                                    <div class="flr">
+                                        <div class="messages">
+                                            <p class="msg" id="msg-1">
+                                                Uygar totonu keserim senin.
+                                            </p>
+                                        </div>
+                                        <span class="timestamp">
+                                            <span class="username" id="usernamee">Alihan</span>&bull;
+                                            <span class="posttime">2 dakika önce.</span>
+                                        </span>
+                                    </div>
+                                    <img class="user-img" id="Alihan" src="../img/images/alihan.jpg" />
+                                </div>
+
+                            </article>
+                            <article class="msg-container msg-remote" id="msg-0">
+                                <div class="msg-box">
+                                    <img class="user-img" id="Emin" src="../img/images/emin.jpg" />
+                                    <div class="flr">
+                                        <div class="messages">
+                                            <p class="msg" id="msg-0">
+                                                aksjflksjflka muhabbete bak ya değiştirin şu şarkıyı
+                                            </p>
+                                        </div>
+                                        <span class="timestamp"><span class="username">Emin</span>&bull;<span class="posttime">1 dakika önce.</span></span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="msg-container msg-remote" id="msg-0">
+                                <div class="msg-box">
+                                    <img class="user-img" id="Uygar" src="../img/images/uygar.jpg" />
+                                    <div class="flr">
+                                        <div class="messages">
+                                            <p class="msg" id="msg-0">
+                                                Tamam abi değiştiriyorum.
+                                            </p>
+                                        </div>
+                                        <span class="timestamp"><span class="username">Uygar</span>&bull;<span class="posttime">Şimdi</span></span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="msg-container msg-self" id="msg-0">
+                                <div class="msg-box">
+                                    <div class="flr">
+                                        <div class="messages">
+                                            <p class="msg" id="msg-1">
+                                                Aferin böyle söz dinle.
+                                            </p>
+                                        </div>
+                                        <span class="timestamp"><span class="username">Alihan</span>&bull;<span class="posttime">Şİmdi</span></span>
+                                    </div>
+                                    <img class="user-img" id="Alihan" src="../img/images/alihan.jpg" />
+                                </div>
+                            </article>
+                        </section>
+                        <form class="chat-input" onsubmit="return false;">
+                            <input type="text" autocomplete="on" placeholder="Mesaj Gönder" />
+                            <button>
+                                <svg style="width:24px;height:24px" viewBox="0 0 24 24"><path fill="rgba(0,0,0,.38)" d="M17,12L12,17V14H8V10H12V7L17,12M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L5,8.09V15.91L12,19.85L19,15.91V8.09L12,4.15Z" /></svg>
+                            </button>
+                        </form>
+                    </section>
+            </div>
+        </div>
+    </div>
+<script src="https://youtube.com/iframe_api"></script>
+<script src="../Js/order.js"></script>
+<script src="../Js/index.js"></script>
+<script src="../Js/youtube_api.js"></script>
+<script src="../Js/logout.js"></script>
+<script src="../Js/musicLibrary.js"></script>
+</body>
+</html>
